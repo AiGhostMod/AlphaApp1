@@ -1,3 +1,5 @@
+https://docs.microsoft.com/en-us/azure/cosmos-db/sql/sql-api-python-samples
+
 export NODE_OPTIONS=--openssl-legacy-provider
 
 npm install
@@ -6,6 +8,8 @@ npm run serve
 
 
 git add .
-git commit -m "first commit"
+git commit -m "commit3"
 git branch -M main
 git push -u origin main
+
+return func.HttpResponse(json.dumps(users_json),status_code=200,mimetype=”application/json”)
