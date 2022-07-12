@@ -3,3 +3,9 @@ export NODE_OPTIONS=--openssl-legacy-provider
 npm install
 npm run build
 npm run serve
+
+
+git add .
+git commit -m "first commit"
+git branch -M main
+git push -u origin main
