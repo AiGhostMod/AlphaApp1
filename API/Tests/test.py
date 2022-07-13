@@ -1,6 +1,6 @@
-import azure.functions as func
 import json
 from azure.cosmos import exceptions, CosmosClient, PartitionKey
+from flask import Flask, jsonify
 
 endpoint = "https://alpha-app-db-2.documents.azure.com:443/"
 key = 'dQ5Y8dSGO8Ie1j3rwk8NsJA20cx18PLZtwOwfNHScSb73IyVEug6Bz68xAuCWg0LUGauevd1iqvkpV0A2I7dJQ=='
@@ -56,3 +56,4 @@ for item in container.query_items(query='SELECT r.id, r.name, r.ester, r.halflif
 
 print(output)
 
+print(jsonify(output))
