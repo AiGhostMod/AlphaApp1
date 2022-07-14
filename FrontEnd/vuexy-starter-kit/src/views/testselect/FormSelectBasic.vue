@@ -35,7 +35,40 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import { BFormSelect, BCardText } from 'bootstrap-vue'
+
 // import { codeBasic } from './code'
+// import axios from 'axios';
+//   let datas;
+//   axios.get('http://127.0.0.1:5000/compounds/')
+//   .then((getResponse) => {
+//     console.log("GET Response")
+//     console.log(getResponse.data);
+//     datas = getResponse.data;
+//     // response.send(data);
+//   })
+  
+
+const axios = require('axios');
+
+// function getLeagues () {
+//   return axios.get('http://127.0.0.1:5000/compounds/')
+//   .then(response => {
+//     return response.data
+//   })
+//   .catch(error => {
+//     console.log(error);
+//     return Promise.reject(error);
+//   });
+// }
+// const consoleLeagues = async () => {
+//   const leagues = await getLeagues();
+//   console.log(typeof leagues);
+//   console.log(leagues.data[0].ester);
+//   return leagues;
+// };
+// let test;
+// consoleLeagues()
+// console.log( test);
 
 export default {
   components: {
@@ -43,7 +76,8 @@ export default {
     BFormSelect,
     BCardText,
   },
-  data() {
+  data() 
+  {
     return {
       selected: null,
       options: [
@@ -55,27 +89,13 @@ export default {
       ],
       // codeBasic,
     }
-  },
-}
-import axios from 'axios';
-// axios
-//   .get('https://api.coindesk.com/v1/bpi/currentprice.json')
-//   .then(response => (this.info = response.data.bpi))
-//   .then(console.log("HIIIIIII1"))
-//   .then(console.log(this))
-//   .catch(error => console.log(error))
-  let data
-  axios.get('http://localhost:7071/api/Get_Compounds')
-  .then((getResponse) => {
-    console.log("GET Response")
-    console.log(getResponse.data);
-    data = getResponse.data;
-    // response.send(data);
-  })
-
-
+  }
   
-
+  // mounted()
+  // {
+  //   axios.get('http://127.0.0.1:5000/compounds/').then(response => {return response.data})
+  // }
+}
 </script>
 
 <!-- <script>
@@ -103,3 +123,5 @@ export default {
   }
 }
 </script> -->
+
+

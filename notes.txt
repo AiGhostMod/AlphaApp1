@@ -6,10 +6,27 @@ npm install
 npm run build
 npm run serve
 
-
+export stamp="$(date --iso-8601=ns)"
 git add .
-git commit -m "commit3"
+git commit -m $stamp
 git branch -M main
 git push -u origin main
 
 return func.HttpResponse(json.dumps(users_json),status_code=200,mimetype=”application/json”)
+
+-----DOTNET Notes-----
+
+dotnet watch run - runs code
+dotnet ef migrations add InitialCreate -o Data/Migration
+dotnet ef database update
+
+control shift P
+
+[Route("[controller]")] means that in the controller the name of the route  will be the first part of the class name - public class WeatherForecastController : ControllerBase - route would be WeatherForecast
+
+add property by typing prop
+
+constructor gets invoked whenever a class is initiated
+
+
+
